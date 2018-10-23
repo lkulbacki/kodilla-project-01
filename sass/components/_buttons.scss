@@ -1,0 +1,42 @@
+.btn {
+  color: $color-white;
+  height: 40px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.btn-grey {
+  background-color: $color-grey-l4;
+  border: solid 3px $color-grey-l4;
+  &:hover {
+    background-color: $color-grey-l3;
+    border: solid 3px $color-grey-l3;
+  }
+  &:active {
+    border: solid 3px $color-grey-l4;
+  }
+}
+
+.btn-orange {
+  background-color: $color-orange-strong;
+  border: solid 3px $color-orange-strong;
+  &:hover {
+    background-color: $color-orange-soft;
+    border: solid 3px $color-orange-soft;
+  }
+  &:active {
+    border: solid 3px $color-orange-strong;
+  }
+}
+
+.btn-disabled {
+  background-color: $color-grey-l2;
+  border: solid 3px $color-grey-l2;
+}
+
+.btn-icon {
+
+}

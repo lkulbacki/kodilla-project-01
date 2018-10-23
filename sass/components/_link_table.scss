@@ -1,0 +1,41 @@
+@import "../variables";
+section.links {
+  margin-top: 23px;
+}
+
+.link-column {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  line-height: 56px;
+  &:nth-of-type(1) {
+    width: 40%;
+  }
+  &:nth-of-type(2){
+  width: 40%;
+  }
+  &:nth-of-type(3){
+    visibility: hidden;
+  }
+}
+
+
+.links {
+  width: 686px;
+  border: none;
+}
+
+.link-row {
+  width: 100%;
+  border-bottom: solid 1px $color-grey-l2;
+  &:hover {
+    background-color: $color-grey-l1;
+    .link-column:nth-of-type(3) {
+      visibility: visible;
+    }
+  }
+  &:first-of-type {
+    border-top: solid 1px $color-grey-l2;
+  }
+}
+
