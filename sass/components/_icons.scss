@@ -4,7 +4,10 @@
   height: 16px;
   margin: 0;
   padding: 0;
-  background-size: 16px 16px;
+  svg {
+    height: 100%;
+    width: 100%;
+  }
   &:hover {
     fill: $color-orange-soft;
     cursor: pointer;
