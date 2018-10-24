@@ -35,41 +35,13 @@ input {
   }
 }
 
-
-// input form icon - approach one
-// con: if actual label is added, icon moves
-.testpassword-label {
-  position: relative;
-  &::after {
-    content: "";
-    z-index: 1;
-    position: absolute;
-    background-color: red;
-    width: 21px;
-    height: 21px;
-    mask-image: url("../../images/icons/password.svg");
-    mask-size: 21px;
-    mask-repeat: no-repeat;
-  }
+label.input-label {
+  cursor: pointer;
+  display: inline-block;
 }
 
-
-// input form icon - approach two
-// whole form disappears!
-
-input.testpassword {
-  background-color: red;
-  mask-image: url("../../images/icons/password.svg");
-  mask-size: 21px;
-  mask-repeat: no-repeat;
-  padding-left: 50px;
-}
-
-
-// input form icon - approach three
-// span as base for icon
-
-span.input-icon {
+div.input-icon {
+  display: inline-block;
   position: relative;
   &::before {
     content: "";
@@ -78,14 +50,13 @@ span.input-icon {
     background-color: red;
     width: 21px;
     height: 21px;
-    mask-image: url("../../images/icons/password.svg");
+    mask-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgMjIgMTQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDIyIDE0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxwYXRoIGQ9Ik0yMS4xLDcuNGwtMi42LTIuNmwtMiwyTDE0LjcsNWgtMi4xYy0xLTIuOC0zLjgtNC40LTYuOC0zLjlDMy41LDEuNSwxLjYsMy40LDEuMSw1LjdjLTAuNCwxLjgsMC4xLDMuNywxLjIsNS4xCglDMy41LDEyLjIsNS4yLDEzLDcsMTNjMi4yLDAsNC4xLTEuMSw1LjItM2g3LjljMC42LDAsMS4xLTAuNCwxLjQtMC45QzIxLjcsOC41LDIxLjYsNy45LDIxLjEsNy40eiBNMjAuNSw4LjdjMCwwLjEtMC4yLDAuMy0wLjUsMC4zCgloLTguNWwtMC4xLDAuM0MxMC42LDExLDguOSwxMiw3LDEyYy0xLjUsMC0yLjktMC43LTMuOS0xLjhjLTEtMS4yLTEuMy0yLjctMS00LjJDMi41LDQsNC4xLDIuNSw2LDIuMUM2LjQsMiw2LjcsMiw3LDIKCWMyLjIsMCw0LjIsMS40LDQuOCwzLjZMMTEuOSw2aDIuNGwyLjIsMi4ybDItMmwxLjksMS45QzIwLjcsOC40LDIwLjYsOC42LDIwLjUsOC43eiBNNS41LDQuNUM0LjEsNC41LDMsNS42LDMsN3MxLjEsMi41LDIuNSwyLjUKCVM4LDguNCw4LDdTNi45LDQuNSw1LjUsNC41eiBNNS41LDguNUM0LjcsOC41LDQsNy44LDQsN3MwLjctMS41LDEuNS0xLjVTNyw2LjIsNyw3UzYuMyw4LjUsNS41LDguNXoiLz4KPC9zdmc+");
     mask-size: 21px;
     mask-repeat: no-repeat;
-    top: 4px;
-    left: 12px;
+    top: 14px;
+    left: 11px;
   }
-}
-
-.testpassword-3 {
-  padding-left: 40px;
+  input {
+    padding-left: 40px;
+  }
 }
