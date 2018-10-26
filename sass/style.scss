@@ -7,12 +7,12 @@
 @import "components/buttons";
 @import "components/forms";
 @import "components/link_table";
-
+@import "sections/_navigation.scss";
 
 * {
-  color: $color-grey-text;
-  font-family: $font;
-  font-weight: $font-weight-normal;
+color: $color-grey-text;
+font-family: $font;
+font-weight: $font-weight-normal;
 }
 
 b, strong {
@@ -22,7 +22,6 @@ b, strong {
 button:focus, textarea:focus, input:focus{
   outline: none;
 }
-
 
 .page-header {
   font-weight: $font-weight-normal;
