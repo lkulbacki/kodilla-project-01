@@ -1,5 +1,122 @@
-header {
+.header {
   height: 60px;
   line-height: 58px;
   border-bottom: solid 2px #e3e3e3;
+
+  a {
+    display: block;
+  }
+
+  .icon {
+    margin-top: 20px;
+    fill: $color-grey-l4;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+}
+
+[class*="header--"] {
+  border-left: 1px solid $color-grey-l2;
+}
+
+.header--navigation {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+}
+
+.header--navigation-element {
+  &:hover {
+    background-color: $color-grey-l1;
+    p {
+      color: $color-grey-l5;
+    }
+    .icon {
+      fill: $color-orange-strong;
+    }
+  }
+  a {
+     display: flex;
+     justify-content: space-around;
+     padding-left: 20px;
+     padding-right: 20px;
+     height: 100%;
+  }
+}
+
+.header--wallet {
+  display: flex;
+  font-size: 20px;
+  font-weight: 400;
+
+
+  .icon-wallet {
+    margin-top: 18px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .icon-arrow-down {
+    margin-top: 24px;
+    width: 11px;
+    height: 11px;
+  }
+
+  p {
+    margin: 0 20px 0 16px;
+  }
+
+}
+
+.header--notification {
+  .icon {
+    position: relative;
+    margin-top: 20px;
+    width: 17px;
+    height: 17px;
+    &::after{
+      position: absolute;
+      display: block;
+      content:"";
+      width: 8px;
+      height: 8px;
+      background-color: $color-orange-strong;
+      right: 0;
+      top: 0;
+      border-radius: 4px;
+    }
+  }
+
+
+}
+
+
+.header--profile {
+  font-size: 13px;
+  font-weight: $font-weight-light;
+
+  .icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  p {
+    margin: 0 0 0 14px;
+  }
+
+}
+
+.header--logout {
+  .icon {
+    width: 19px;
+    height: 19px;
+  }
 }
