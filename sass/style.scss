@@ -7,13 +7,14 @@
 @import "components/buttons";
 @import "components/forms";
 @import "components/link_table";
-@import "sections/_navigation.scss";
-@import "sections/_header.scss";
+@import "sections/navigation";
+@import "sections/header";
+@import "sections/general_statistic";
 
 * {
-color: $color-grey-text;
-font-family: $font;
-font-weight: $font-weight-normal;
+  color: $color-grey-text;
+  font-family: $font;
+  font-weight: $font-weight-normal;
 }
 
 b, strong {
@@ -22,6 +23,12 @@ b, strong {
 
 button:focus, textarea:focus, input:focus{
   outline: none;
+}
+
+[class*="section--"] {
+  margin: 16px 18px 0 18px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: $color-white;
 }
 
 .page-header {
@@ -54,6 +61,9 @@ a {
   }
 }
 
+.page--general .section--links {
+  background-color: darkolivegreen;
+}
 
 
 /* Components */

@@ -15,6 +15,10 @@ body {
   display: flex;  /*enables flex content for its children*/
 }
 
+body.body--styleguide {
+  display: block;
+}
+
 .column {
   height: 100%;  /*allows both columns to span the full height of the browser window*/
   display: flex;
@@ -48,5 +52,6 @@ body {
 .bottom-right {
   flex-grow: 1;  /*ensures that the container will take up the full height of the parent container*/
   overflow-y: auto;  /*adds scroll to this container*/
+  background-color: #f5f5f2;
 }
 
