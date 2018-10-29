@@ -6,11 +6,11 @@
 @import "components/icons";
 @import "components/buttons";
 @import "components/forms";
-@import "components/link_table";
 @import "sections/section_generic";
 @import "sections/navigation";
 @import "sections/header";
 @import "sections/general_statistic";
+@import "sections/links";
 
 * {
   color: $color-grey-text;
@@ -55,11 +55,6 @@ a {
     cursor: pointer;
   }
 }
-
-.page--general .section--links {
-  background-color: darkolivegreen;
-}
-
 
 /* Components */
 //import "components/form_field";
