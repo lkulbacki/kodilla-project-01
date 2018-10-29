@@ -55,3 +55,16 @@ body.body--styleguide {
   background-color: #f5f5f2;
 }
 
+/* GRID def */
+.container {
+  width: 100%;
+  margin: 0 auto; }
+
+.row:before,
+.row:after {
+  content: "";
+  display: table; }
+
+.row:after {
+  clear: both; }
+
