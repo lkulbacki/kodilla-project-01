@@ -7,6 +7,7 @@
 @import "components/buttons";
 @import "components/forms";
 @import "components/link_table";
+@import "sections/section_generic";
 @import "sections/navigation";
 @import "sections/header";
 @import "sections/general_statistic";
@@ -25,13 +26,7 @@ button:focus, textarea:focus, input:focus{
   outline: none;
 }
 
-[class*="section--"] {
-  margin: 16px 18px 0 18px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: $color-white;
-}
-
-.page-header {
+.header-page {
   font-weight: $font-weight-normal;
   text-transform: uppercase;
   line-height: 46px;
@@ -39,7 +34,7 @@ button:focus, textarea:focus, input:focus{
   font-size: $font-size-large;
 }
 
-.section-header {
+.header-section {
   font-weight: 700;
   font-size: $font-size-large;
   margin: 0;

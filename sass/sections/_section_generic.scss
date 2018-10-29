@@ -1,0 +1,25 @@
+[class^="section-"] {
+
+  margin: 16px 18px 0 18px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: $color-white;
+
+  &:last-of-type {
+    margin-bottom: 18px;
+  }
+
+  .container--border-bottom {
+    border-bottom: 2px solid $color-grey-l2;
+  }
+  /* header-container details */
+  .header-container {
+    @extend .container--border-bottom;
+    border-top: 2px solid $color-white;
+    text-align: left;
+  }
+
+  .header-page {
+    line-height: 25px;
+  }
+
+}
