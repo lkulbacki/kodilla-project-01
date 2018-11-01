@@ -1,0 +1,35 @@
+.container-pagination {
+  font-size: $font-size-large;
+  text-align: center;
+}
+
+
+[class^="container-pagination__"] {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+  line-height: 40px;
+  margin-left: -3px;
+  margin-right: -3px;
+
+  a {
+    border: 1px solid $color-white;
+    display: block;
+    fill: $color-grey-l3;
+    &:hover {
+      border: 1px solid $color-grey-l1;
+      fill: $color-orange-strong;
+    }
+  }
+}
+
+.container-pagination__page-number--active {
+  background-color: #f1f3f3;
+  pointer-events: none;
+  cursor: default;
+  a {
+    font-weight: $font-weight-heavy;
+    color: $color-grey-l3;
+  }
+}
