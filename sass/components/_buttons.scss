@@ -1,14 +1,22 @@
 .btn {
   color: $color-white;
+  width: max-content;
   height: 40px;
   border-radius: 3px;
   border: none;
   cursor: pointer;
   padding-left: 15px;
   padding-right: 15px;
+  line-height: 33px;
+  font-size: $font-size-large;
+  font-weight: $font-weight-light;
 }
 
-.btn-grey {
+.btn--centered {
+  margin: 23px auto;
+}
+
+.btn--grey {
   background-color: $color-grey-l4;
   border: solid 3px $color-grey-l4;
   &:hover {
@@ -20,7 +28,7 @@
   }
 }
 
-.btn-orange {
+.btn--orange {
   background-color: $color-orange-strong;
   border: solid 3px $color-orange-strong;
   &:hover {
@@ -32,11 +40,8 @@
   }
 }
 
-.btn-disabled {
+.btn--disabled {
   background-color: $color-grey-l2;
   border: solid 3px $color-grey-l2;
-}
-
-.btn-icon {
-
+  cursor: default;
 }
