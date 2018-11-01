@@ -72,6 +72,12 @@ typings/
 # Serverless directories
 .serverless
 
+# Project specific
 materialy
+
+#WebStorm configuration
 .idea
+
+# CSS - map files and compiled CSS
 *.map
+css/*
