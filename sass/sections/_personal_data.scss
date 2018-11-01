@@ -1,0 +1,31 @@
+.section-personal-data {
+
+  padding-bottom: 20px;
+
+  input {
+    width: 310px;
+  }
+
+  label {
+    width: 160px;
+  }
+
+  button {
+    display: block;
+  }
+
+  .field {
+    margin: 0 auto 15px auto;
+    width: max-content;
+    &:last-of-type {
+      margin: 0 auto;
+    }
+  }
+
+  .container-form {
+    border-bottom: 2px solid $color-grey-l2;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+}
