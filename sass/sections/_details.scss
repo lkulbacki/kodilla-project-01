@@ -25,7 +25,68 @@
 }
 
 
-.container-table {
+[class*="container-table"] {
+  /*
+ * General good-look styles
+ */
+  .table-wrapper {
+    font-size: $font-size-small;
+    text-align: right;
+    color: #191919;
+    margin: 0 auto;
+  }
+
+  .table-row {
+    border-bottom: 1px solid #e0e0e0;
+    border-collapse: collapse;
+    padding: 22px 0;
+    color: #191919;
+    font-weight: $font-weight-light;
+    &:hover {
+      background-color: $color-grey-l1;
+    }
+  }
+
+
+  .table-row.header {
+    font-weight: $font-weight-heavy;
+    padding: 8px 0;
+    height: unset;
+    line-height: unset;
+    &:hover {
+      background-color: unset;
+    }
+  }
+
+  .icon {
+    visibility: hidden;
+    width: 8px;
+    height: 8px;
+    margin-top: 3px;
+    margin-left: 7px;
+  }
+
+  span {
+    color: $color-grey-l4;
+    border-radius: 3px;
+    padding: 8px;
+    margin: 0 -35px 0 auto;
+    &:hover {
+      position: relative;
+      background-color: $color-grey-l1;
+      color: $color-grey-l5;
+      z-index: 1;
+      cursor: pointer;
+      .icon {
+        visibility: visible;
+      }
+    }
+  }
+
+
+}
+
+.container-table-collapsing-flexbox {
   /*
  * Define the widths: play around with these
  * to get a best fit.
@@ -41,16 +102,7 @@
   $turnover-width: 75px;
   $deal-width: 70px;
 
-  .table-wrapper {
-    //width: 100%;
-    //width: $tracker-name-width + $initiated-date-width + $numeric-column-narrow-width*2
-    //+ $numeric-column-wide-width*3 + $deposits-width + $payout-width + $turnover-width + $deal-width
-    //+ 30px;
-    font-size: $font-size-small;
-    text-align: right;
-    color: #191919;
-    margin: 0 auto;
-  }
+
   /*
    * Basic styles, good for a large display. Everything fits in
    * one row, no wrapping. All text based cells grow equally.
@@ -182,56 +234,4 @@
       @include vertical;
     }
   }
-
-  /*
-   * General good-look styles
-   */
-  .table-row {
-    border-bottom: 1px solid #e0e0e0;
-    border-collapse: collapse;
-    padding: 22px 0;
-    color: #191919;
-    font-weight: $font-weight-light;
-    &:hover {
-      background-color: $color-grey-l1;
-    }
-  }
-
-  .table-row.header {
-    font-weight: $font-weight-heavy;
-    padding: 8px 0;
-    height: unset;
-    line-height: unset;
-    &:hover {
-      background-color: unset;
-    }
-
-    span {
-      color: $color-grey-l4;
-      border-radius: 3px;
-      padding: 8px;
-      margin: 0 -35px 0 auto;
-      &:hover {
-        position: relative;
-        background-color: $color-grey-l1;
-        color: $color-grey-l5;
-        z-index: 1;
-        cursor: pointer;
-        .icon {
-          visibility: visible;
-        }
-      }
-    }
-
-    .icon {
-      //display: none;
-      visibility: hidden;
-      width: 8px;
-      height: 8px;
-      margin-top: 3px;
-      margin-left: 7px;
-    }
-  }
-
-
 }
