@@ -1,0 +1,38 @@
+.container-table-standard-flexbox {
+  $column-date-width: 150px;
+  $column-amount-width: 100px;
+  $column-deal-width: 70px;
+  $column-account-width: 80px;
+
+  padding: 20px;
+
+  .table-wrapper {
+    text-align: left;
+  }
+
+  .table-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    span {
+      margin: 0 0 0 -8px;
+      width: fit-content;
+    }
+  }
+
+  .date {
+    width: $column-date-width;
+  }
+
+  .amount {
+    width: $column-amount-width;
+  }
+
+  .deal {
+    width: $column-deal-width;
+  }
+
+  .account {
+    width: $column-account-width;
+  }
+}
