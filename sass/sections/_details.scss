@@ -1,0 +1,237 @@
+.section--details {
+  padding-bottom: 20px;
+
+  .container-calendar--row {
+    display: flex;
+    padding-top: 33px;
+    padding-bottom: 33px;
+    justify-content: center;
+    max-width: 684px;
+    margin: 0 auto;
+  }
+
+  .calendar-wrapper {
+    margin-right: 13px;
+  }
+
+  .btn {
+    padding: 8px;
+    fill: $color-white;
+  }
+
+  .container-pagination {
+    margin: 0 auto;
+  }
+}
+
+
+.container-table {
+  /*
+ * Define the widths: play around with these
+ * to get a best fit.
+ */
+
+  padding: 20px;
+  $tracker-name-width: 95px;
+  $initiated-date-width: 120px;
+  $numeric-column-narrow-width: 50px;
+  $numeric-column-wide-width: 70px;
+  $deposits-width: 80px;
+  $payout-width: 70px;
+  $turnover-width: 75px;
+  $deal-width: 70px;
+
+  .table-wrapper {
+    //width: 100%;
+    //width: $tracker-name-width + $initiated-date-width + $numeric-column-narrow-width*2
+    //+ $numeric-column-wide-width*3 + $deposits-width + $payout-width + $turnover-width + $deal-width
+    //+ 30px;
+    font-size: $font-size-small;
+    text-align: right;
+    color: #191919;
+    margin: 0 auto;
+  }
+  /*
+   * Basic styles, good for a large display. Everything fits in
+   * one row, no wrapping. All text based cells grow equally.
+   */
+  // Main container - row container
+  .table-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  // Wrappers around cells and other wrappers
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  // leaf level containers (cells): common properties
+  .column {
+    height: unset;
+    flex-grow: 0;
+    flex-shrink: 0;
+    vertical-align: top;
+  }
+
+  // leaf level containers: widths
+  .tracker-name { min-width: $tracker-name-width; }
+  .initiated-date { min-width: $initiated-date-width; }
+  .visits, .ftd { min-width: $numeric-column-narrow-width }
+  .unique, .signups, .depositors { min-width: $numeric-column-wide-width; }
+  .deposits { min-width: $deposits-width; }
+  .payout { min-width: $payout-width; }
+  .turnover { min-width: $turnover-width; }
+  .deal { min-width: $deal-width; }
+
+  /* growable wrappers */
+  .initiation, .numeric, .deposits-payout, .turnover-deal, .money {
+    flex-grow: 1;
+  }
+
+  /*
+   * Media queries: optimize for different screen widths.
+   */
+
+  // Wrapper widths
+  $initiation-width: max($tracker-name-width, $initiated-date-width);
+  $numeric-first-width: max($numeric-column-narrow-width, $numeric-column-wide-width);
+  $numeric-second-width: max($numeric-column-narrow-width, $numeric-column-wide-width);
+  $turnover-deal-width: max($turnover-width, $deal-width);
+  $deposits-payout-width: max($deposits-width, $payout-width);
+  $money-width: max($deposits-payout-width, $turnover-deal-width);
+
+  @mixin horizontal {
+    flex-direction: row;
+  }
+
+  .horizontal {
+    @include horizontal;
+  }
+
+  @mixin vertical {
+    // Let the wrapper flex vertically, so we get 2 rows
+    flex-direction: column;
+    // can't have the children grow, since this now means vertical growth
+    div {
+      flex-grow: 0;
+    }
+  }
+
+  .vertical {
+    @include vertical;
+  }
+
+  @mixin vertical-growing {
+    @include vertical;
+    > div {
+      // Let immediate child divs grow horizontally, 100% to fill the wrapper
+      width: 100%;
+    }
+  }
+
+  /*
+   * Media breaks.
+   */
+
+  // First break: as many 2-row fields as possible. This will leave Severity
+  // and Dates still horizontal, as they are odd numbered
+  @media all and (max-width: ($initiation-width*2 + $numeric-first-width*3
+  + $numeric-second-width*2 + $deposits-width + $payout-width + $turnover-width + $deal-width
+  + $layout-left-width + 40px) ) {
+
+
+    //.initiation {
+    //  @include vertical-growing;
+    //  width: $initiation-width;
+    //}
+    .initiation {
+      @include vertical;
+    }
+  }
+
+  @media all and (max-width: ($initiation-width + $numeric-first-width*3
+  + $numeric-second-width*2 + $deposits-payout-width*2 + $turnover-deal-width*2
+  + $layout-left-width + 40px) ) {
+
+
+    //.initiation {
+    //  @include vertical-growing;
+    //  width: $initiation-width;
+    //}
+    .deposits-payout, .turnover-deal {
+      @include vertical;
+    }
+  }
+
+  @media all and (max-width: ($initiation-width + $numeric-first-width*3
+  + $numeric-second-width*2 + $deposits-payout-width + $turnover-deal-width
+  + $layout-left-width + 40px) ) {
+
+
+    //.initiation {
+    //  @include vertical-growing;
+    //  width: $initiation-width;
+    //}
+    .numeric-first, .numeric-second {
+      @include vertical;
+    }
+  }
+
+  /*
+   * General good-look styles
+   */
+  .table-row {
+    border-bottom: 1px solid #e0e0e0;
+    border-collapse: collapse;
+    padding: 22px 0;
+    color: #191919;
+    font-weight: $font-weight-light;
+    &:hover {
+      background-color: $color-grey-l1;
+    }
+  }
+
+  .table-row.header {
+    font-weight: $font-weight-heavy;
+    padding: 8px 0;
+    height: unset;
+    line-height: unset;
+    &:hover {
+      background-color: unset;
+    }
+
+    span {
+      color: $color-grey-l4;
+      border-radius: 3px;
+      padding: 8px;
+      margin: 0 -35px 0 auto;
+      &:hover {
+        position: relative;
+        background-color: $color-grey-l1;
+        color: $color-grey-l5;
+        z-index: 1;
+        cursor: pointer;
+        .icon {
+          visibility: visible;
+        }
+      }
+    }
+
+    .icon {
+      //display: none;
+      visibility: hidden;
+      width: 8px;
+      height: 8px;
+      margin-top: 3px;
+      margin-left: 7px;
+    }
+  }
+
+
+}

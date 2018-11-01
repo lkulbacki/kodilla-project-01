@@ -6,11 +6,13 @@
 @import "components/icons";
 @import "components/buttons";
 @import "components/forms";
+@import "components/pagination";
 @import "sections/section_generic";
 @import "sections/navigation";
 @import "sections/header";
 @import "sections/general_statistic";
 @import "sections/links";
+@import "sections/details";
 
 body {
   color: $color-grey-text;
