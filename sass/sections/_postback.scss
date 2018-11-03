@@ -1,0 +1,105 @@
+.section-postback {
+  p {
+    color: $color-grey-l5;
+    font-weight: $font-weight-light;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+  }
+
+  .field {
+    flex-basis: auto;
+    margin: auto;
+    flex-grow: 1;
+  }
+
+  .postback-parameters label {
+    margin-bottom: 20px;
+  }
+
+  .select-row {
+    margin-top: 20px;
+    .field {
+      padding-right: 20px;
+      &:last-of-type {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .textarea-signup {
+    margin-right: 9px;
+    textarea {
+      min-width: 300px;
+      min-height: 180px;
+    }
+  }
+
+  .textarea-deposit {
+    margin-left: 9px;
+    textarea {
+      min-width: 300px;
+      min-height: 180px;
+    }
+  }
+
+  .postback-parameters {
+    padding: 15px;
+  }
+
+  label {
+    display: block;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  select {
+    width: 100%;
+  }
+
+  button {
+    margin: 20px;
+  }
+
+  .postback-parameters-vertical-divide {
+    border-top: 2px solid $color-grey-l2;
+    border-bottom: 2px solid $color-grey-l2;
+    strong {
+      color: red;
+    }
+
+    .checkboxes {
+      padding: 20px;
+      width: 50%;
+      min-width: 300px;
+      border-right: 2px solid $color-grey-l2;
+      label {
+        display: inline-block;
+        color: $color-grey-l5;
+        font-weight: $font-weight-light;
+      }
+    }
+  }
+
+  .clearfix {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .scroll {
+    overflow-y: scroll;
+    max-height: 180px;
+  }
+
+  .range {
+    min-width: 300px;
+    padding: 15px;
+  }
+}
