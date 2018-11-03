@@ -97,3 +97,77 @@ div.input-icon {
     padding: 10px 10px;
   }
 }
+
+select {
+  appearance: none;
+  background-color: #ffffff;
+  border-radius: 3px;
+  border: 1px solid $color-grey-l3;
+  padding: 5px 30px 5px 10px;
+  font-size: $font-size-normal;
+  display: block;
+  font-weight: $font-weight-light;
+  background-image: url(https://image.flaticon.com/icons/png/128/118/118738.png);
+  background-size: 15px auto;
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+}
+
+
+.checkbox {
+  /* move original checkbox tick out of sight */
+  input[type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+
+    /* change styling of tick for checked checkbox */
+    &:checked + label .checkbox__icon {
+      background-color: $color-green;
+      border: 2px solid $color-green;
+    }
+
+    &:checked + label .checkbox__icon-tick {
+      visibility: visible;
+    }
+  }
+
+  /* style label: whole area got to be clickable */
+  label {
+    display: block;
+    position: relative;
+    width: 100%;
+    line-height: 19px;
+    padding: 13px 13px 13px 45px;
+    color: $color-grey-l5;
+    font-weight: $font-weight-light;
+    font-size: $font-size-normal;
+    cursor: pointer;
+  }
+
+  label:hover {
+    background-color: $color-grey-l1;
+  }
+
+  .checkbox__icon {
+    position: absolute;
+    display: block;
+    left: 13px;
+    top: 12px;
+    width: 19px;
+    height: 19px;
+    border: 2px solid $color-grey-l3;
+  }
+
+  /* use CSS styling of div instead of icon for tick */
+  .checkbox__icon-tick {
+    position: absolute;
+    visibility: hidden;
+    transform: rotate(-40deg);
+    top: 3px;
+    left: 2px;
+    width: 11px;
+    height: 6px;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+  }
+}
