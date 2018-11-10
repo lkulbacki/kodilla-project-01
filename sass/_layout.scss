@@ -13,6 +13,7 @@ body {
   overflow: hidden;  /*makes the body non-scrollable (we will add scrolling to the sidebar and main content containers)*/
   margin: 0;  /*removes default style*/
   display: flex;  /*enables flex content for its children*/
+  flex-flow: column;
 }
 
 body.body--styleguide {
@@ -20,40 +21,38 @@ body.body--styleguide {
   overflow: scroll;
 }
 
-.column {
-  height: 100%;  /*allows both columns to span the full height of the browser window*/
+.layout-row-top {
   display: flex;
-  flex-direction: column;  /*places the left and right headers above the bottom content*/
+  height: $layout-row-top-height;
+  flex-shrink: 0;
 }
 
-.layout-right {
+.layout-row-bottom {
+  display: flex;
   flex-grow: 1;
 }
 
-.layout-left {
+.layout-row-top-left {
   flex-shrink: 0;  /*makes sure that content is not cut off in a smaller browser window*/
   width: $layout-left-width;
-
 }
 
-.top-left {
+.layout-row-top-right {
   flex-shrink: 0;
-}
-
-.top-right {
-  flex-shrink: 0;
+  flex-grow: 1;
   display: inline-flex;
 }
 
-.bottom-left {
-  flex-grow: 0;
-  height: 100%;
+.layout-row-bottom-left {
+  flex-shrink: 0;  /*makes sure that content is not cut off in a smaller browser window*/
+  width: $layout-left-width;
 }
 
-.bottom-right {
-  flex-grow: 1;  /*ensures that the container will take up the full height of the parent container*/
-  overflow-y: auto;  /*adds scroll to this container*/
-  background-color: #f5f5f2;
+.layout-row-bottom-right {
+  overflow: scroll;
+  flex-grow: 1;
+}
+
 }
 
 /* GRID def */
@@ -68,4 +67,3 @@ body.body--styleguide {
 
 .row:after {
   clear: both; }
-

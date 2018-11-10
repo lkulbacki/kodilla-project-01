@@ -14,12 +14,43 @@
 
 <body class="page--details">
 
-<div class="layout-left column">
-    <div class="top-left">
+<div class="layout-row-top">
+    <div class="layout-row-top-left navigation--column">
         <div class="navigation__logo"><img src="images/logo.svg" alt="logo"></div>
         <div class="navigation__menu-button"><i class="icon icon-hamburger"><svg><use xlink:href="images\icons\if_menu-alt_134216.svg#Layer_1"></use></svg></i></div>
     </div>
-    <nav class="bottom-left">
+    <header class="layout-row-top-right header">
+        <ul class="header--navigation">
+            <li class="header--navigation-element header--wallet">
+                <a href="#">
+                    <i class="icon icon-wallet"><svg><use xlink:href="images\icons\wallet.svg#Layer_1"></use></svg></i>
+                    <p>$1,500.00</p>
+                    <i class="icon icon-arrow-down"><svg><use xlink:href="images\icons\arrow-down.svg#Layer_1"></use></svg></i>
+                </a>
+            </li>
+            <li class="header--navigation-element header--notification">
+                <a href="#">
+                    <i class="icon icon-notification"><svg><use xlink:href="images\icons\notification.svg#Layer_1"></use></svg></i>
+                </a>
+            </li>
+            <li class="header--navigation-element header--profile">
+                <a href="#">
+                    <i class="icon icon-profile"><svg><use xlink:href="images\icons\profile.svg#Layer_1"></use></svg></i>
+                    <p>Leonard Cohen</p>
+                </a>
+            </li>
+            <li class="header--navigation-element header--logout">
+                <a href="#">
+                    <i class="icon icon-logout"><svg><use xlink:href="images\icons\quit.svg#Layer_1"></use></svg></i>
+                </a>
+            </li>
+        </ul>
+
+    </header>
+</div>
+
+<div class="layout-row-bottom">
+    <nav class="layout-row-bottom-left navigation--column">
         <ul class="navigation__menu-wrapper">
             <li class="navigation__menu-element"><a href="index.html">
                 <i class="icon icon-star"><svg><use xlink:href="images\icons\general.svg#Layer_1"></use></svg></i>
@@ -56,38 +87,8 @@
             <p class="manager-name"><a href="#">Mikhael E.</a></p>
         </div>
     </nav>
-</div>
-<div class="layout-right column">
-    <header class="top-right header">
-        <ul class="header--navigation">
-            <li class="header--navigation-element header--wallet">
-                <a href="#">
-                    <i class="icon icon-wallet"><svg><use xlink:href="images\icons\wallet.svg#Layer_1"></use></svg></i>
-                    <p>$1,500.00</p>
-                    <i class="icon icon-arrow-down"><svg><use xlink:href="images\icons\arrow-down.svg#Layer_1"></use></svg></i>
-                </a>
-            </li>
-            <li class="header--navigation-element header--notification">
-                <a href="#">
-                    <i class="icon icon-notification"><svg><use xlink:href="images\icons\notification.svg#Layer_1"></use></svg></i>
-                </a>
-            </li>
-            <li class="header--navigation-element header--profile">
-                <a href="#">
-                    <i class="icon icon-profile"><svg><use xlink:href="images\icons\profile.svg#Layer_1"></use></svg></i>
-                    <p>Leonard Cohen</p>
-                </a>
-            </li>
-            <li class="header--navigation-element header--logout">
-                <a href="#">
-                    <i class="icon icon-logout"><svg><use xlink:href="images\icons\quit.svg#Layer_1"></use></svg></i>
-                </a>
-            </li>
-        </ul>
 
-    </header>
-
-    <div class="bottom-right">
+    <div class="layout-row-bottom-right">
         <section class="section--details">
             <div class="container header-container">
                 <h1 class="header-page">Details</h1>
