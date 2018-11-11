@@ -53,20 +53,6 @@ body.body--styleguide {
   flex-grow: 1;
 }
 
-/* GRID def */
-.container {
-  width: 100%;
-  margin: 0 auto; }
-
-.row:before,
-.row:after {
-  content: "";
-  display: table; }
-
-.row:after {
-  clear: both; }
-
-
 @media(max-width: 768px) {
   .layout-row-top {
     flex-flow: column;
