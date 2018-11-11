@@ -1,7 +1,8 @@
 /* toggle menu */
 
 function toggleMenu(visible) {
-    document.querySelector('.layout-row-bottom-left').classList.toggle('noshow', visible)
+    document.querySelector('.layout-row-bottom-left').classList.toggle('show', visible)
+    document.querySelector('.layout-row-top-right').classList.toggle('noshow', visible)
 }
 
 document.querySelector('.navigation__menu-button').addEventListener('click', function(e) {
@@ -10,3 +11,9 @@ document.querySelector('.navigation__menu-button').addEventListener('click', fun
 });
 
 /* toggle menu end */
+
+
+/* toggle menu mobile */
+// aim: on mobile when opening menu - hide all other elements
+
+/* toggle menu mobile end*/

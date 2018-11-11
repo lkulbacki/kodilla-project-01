@@ -120,3 +120,38 @@
     height: 19px;
   }
 }
+
+
+
+@media(max-width: 768px) {
+  .layout-row-top{
+    height: unset;
+  }
+
+  .header {
+    height: unset;
+  }
+
+  .header--navigation {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: none;
+  }
+
+  .header--navigation-element {
+    flex-grow: 1;
+    border-width: 0 1px 1px 0;
+    border-style: solid;
+    border-color: $color-grey-l2;
+    min-height: 58px;
+  }
+
+  [class*="header--"] {
+    border-left: none;
+  }
+
+  .layout-row-bottom-left {
+    overflow: scroll;
+  }
+
+}
