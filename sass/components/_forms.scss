@@ -33,6 +33,10 @@ input[type="text"], input[type="password"], input[type="select"], input[type="da
   &::placeholder {
     color: #a6a6a6;
   }
+
+  &.error {
+    border: 1px solid $color-red;
+  }
 }
 
 label.input-label {
@@ -172,7 +176,7 @@ select {
   }
 }
 
-
+/* simple range slider styling */
 input[type=range].slider {
   -webkit-appearance: none;
   width: 100%;

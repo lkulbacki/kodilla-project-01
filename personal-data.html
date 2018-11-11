@@ -94,7 +94,7 @@
             <div class="container header-container">
                 <h1 class="header-page">Personal data</h1>
             </div>
-            <form action="" method="POST">
+            <form id="personal-data" action="" method="POST">
                 <div class="container container-form">
                     <div class="field">
                         <label class="input-label" for="input-name">Name</label>
@@ -106,7 +106,8 @@
                     </div>
                     <div class="field">
                         <label class="input-label" for="input-email">Email</label>
-                        <input id="input-email" required= name="email" type="text" placeholder="">
+                        <input id="input-email" required name="email" type="text" placeholder="">
+                        <div class="error"></div>
                     </div>
                     <div class="field">
                         <label class="input-label" for="input-phone">Phone number</label>
