@@ -1,0 +1,30 @@
+
+/* mixin designed to control menu display on various screen resolutions */
+/* aim: initially show menu on desktop but hide it on mobile */
+
+@mixin show-noshow($prefix) {
+  .show-#{$prefix} {
+    display: block;
+  }
+  .noshow-#{$prefix} {
+    display: none;
+  }
+}
+
+// actual grid definition
+
+@media(max-width: 767px) {
+  @include show-noshow('sm');
+}
+
+@media(min-width: 768px) {
+  @include show-noshow('md');
+}
+
+@media(min-width: 992px) {
+  @include show-noshow('lg');
+}
+
+@media(min-width: 1200px) {
+  @include show-noshow('xl');
+}

@@ -46,7 +46,6 @@ body.body--styleguide {
 .layout-row-bottom-left {
   flex-shrink: 0;  /*makes sure that content is not cut off in a smaller browser window*/
   width: $layout-left-width;
-  display: none;
 }
 
 .layout-row-bottom-right {
@@ -84,7 +83,6 @@ body.body--styleguide {
 
   .layout-row-bottom-left {
     width: 100%;
-    display: none;
   }
   .noshow {
     display: none;
