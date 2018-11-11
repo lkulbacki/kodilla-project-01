@@ -49,3 +49,13 @@
   border: solid 3px $color-grey-l2;
   cursor: default;
 }
+
+.btn--close {
+  cursor: pointer;
+  &:hover {
+    background-color: $color-grey-l2;
+    i {
+      fill: $color-orange-strong;
+    }
+  }
+}

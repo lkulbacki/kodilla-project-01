@@ -1,0 +1,117 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+
+  justify-content: center;
+  align-items: center;
+
+  overflow: auto;
+  padding: 30px;
+
+  display: none;
+
+  &.show {
+    display: flex;
+  }
+}
+
+.modal {
+  max-width: 1000px;
+  width: 90%;
+  margin: auto;
+  background-color: #ffffff;
+  position: relative;
+  display: none;
+  &.show {
+    display: block;
+  }
+}
+
+.modal__header {
+  border-bottom: 2px solid $color-grey-l2;
+}
+
+.modal__header-text {
+  font-size: $font-size-large;
+  line-height: 42px;
+  text-transform: uppercase;
+  margin: 4px 0 0 0;
+  font-weight: $font-weight-normal;
+}
+
+.modal__header-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 16px 16px 11px 16px;
+}
+
+
+// ADD LINK
+.modal-addlink {
+  .scheme-name__container, .select-websites__container {
+    padding-bottom: 10px;
+    border-bottom: 2px solid $color-grey-l2;
+  }
+  .scheme-name__row {
+    .field {
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-end;
+      padding: 10px;
+    }
+
+    label {
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+
+    select {
+      height: 40px;
+    }
+  }
+
+  .scheme-name__field-name {
+    flex: 0 1 400px;
+  }
+
+  .scheme-name__field-complaint {
+    flex: 0 1 400px;
+  }
+
+  .scheme-name__field-language {
+    flex: 0 1 130px;
+  }
+
+  .select-websites__row {
+    flex-flow: column;
+  }
+
+  .select-websites__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .checkbox {
+    width: 315px;
+  }
+
+  .footer__container {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -10px;
+    input {
+      flex-grow: 1;
+    }
+    > * {
+      margin: 0 10px;
+    }
+  }
+}

@@ -136,7 +136,7 @@
             <div class="container header-container">
                 <h1 class="header-page">Links</h1>
             </div>
-            <div class="btn btn--orange btn--centered">+ add new</div>
+            <div class="btn btn--orange btn--centered btn-modal--add-link">+ add new</div>
             <div class="container link-list">
                 <div class="link-list__link-row">
                     <div class="link-list__link-column name header-section">Home page</div>
@@ -187,7 +187,7 @@
                     </div>
                 </div>
             </div>
-            <div class="btn btn--orange btn--centered">+ add new</div>
+            <div class="btn btn--orange btn--centered btn-modal--add-link">+ add new</div>
         </section>
 
 
@@ -195,6 +195,86 @@
 </div>
 
 
+<div class="overlay" id="overlay">
+    <div class="modal modal-addlink" id="addLinkModal">
+            <form action="" method="">
+                <div class="container modal__header">
+                    <h1 class="modal__header-text">add url</h1>
+                    <div class="modal__header-button js--close-modal btn--close"><i class="icon icon-close"><svg><use xlink:href="images\icons\close.svg#Layer_1"></use></svg></i></div>
+                </div>
+                <div class="container scheme-name__container">
+                    <div class="row scheme-name__row">
+                        <div class="field scheme-name__field-name">
+                            <label for="scheme-name__name">Scheme name</label>
+                            <input id="scheme-name__name" name="scheme-name__name" type="text" placeholder="Placeholder">
+                        </div>
+                        <div class="field scheme-name__field-complaint">
+                            <select id="scheme-name__complaint" name="scheme-name__complaint">
+                                <option value="0">Select complaint...</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                        </div>
+                        <div class="field scheme-name__field-language">
+                            <label for="scheme-name__language">Language</label>
+                            <select id="scheme-name__language" name="scheme-name__language">
+                                <option value="1">EN</option>
+                                <option value="2">PL</option>
+                                <option value="3">JP</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="container select-websites__container">
+                    <div class="row select-websites__row">
+                        <p>Select websites</p>
+                        <div class="select-websites__list">
+                            <div class="checkbox">
+                                <input type="checkbox" id="website01" name="websites"
+                                       value="website01"/>
+                                <label for="website01"><div class="checkbox__icon"><div class="checkbox__icon-tick"></div></div>website01</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="website02" name="websites"
+                                       value="website02"/>
+                                <label for="website02"><div class="checkbox__icon"><div class="checkbox__icon-tick"></div></div>website02</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="website03" name="websites"
+                                       value="website03"/>
+                                <label for="website03"><div class="checkbox__icon"><div class="checkbox__icon-tick"></div></div>website03</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="website04" name="websites"
+                                       value="website04"/>
+                                <label for="website04"><div class="checkbox__icon"><div class="checkbox__icon-tick"></div></div>website04</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="website05" name="websites"
+                                       value="website05"/>
+                                <label for="website05"><div class="checkbox__icon"><div class="checkbox__icon-tick"></div></div>website05</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="website06" name="websites"
+                                       value="website06"/>
+                                <label for="website06"><div class="checkbox__icon"><div class="checkbox__icon-tick"></div></div>website06</label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container footer__container">
+                    <input id="add-link__generated-link" name="add-link__generated-link" type="text" placeholder="Generated link">
+                    <button class="btn btn--disabled">Copy link</button>
+                    <button type="submit" class="btn btn--orange btn--right js--close-modal">Save</button>
+                </div>
+
+            </form>
+
+    </div>
+</div>
 
 
 
