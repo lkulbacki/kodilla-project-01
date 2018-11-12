@@ -248,6 +248,10 @@ section.inputs, section.buttons, section.links { padding-left: 20px; }
 
 .btn--close:hover i { fill: #f58220; }
 
+.btn--icon { fill: #ffffff; padding: 4px 8px; }
+
+.btn--icon:hover .icon { fill: #ffffff; }
+
 textarea { border-radius: 3px; border: 1px solid #bababa; font-size: 12px; font-weight: 300; color: #333333; padding: 20px 18px; }
 
 textarea:hover { color: #333333; border: 1px solid #333333; }
@@ -477,8 +481,6 @@ input[type=range].slider:focus::-ms-fill-upper { background: #e3e3e3; }
 .section--general-statistic .container-calendar--row { display: -ms-flexbox; display: flex; padding-top: 33px; padding-bottom: 33px; -ms-flex-pack: center; justify-content: center; max-width: 684px; margin: 0 auto; }
 
 .section--general-statistic .calendar-wrapper { margin-right: 13px; }
-
-.section--general-statistic .btn { padding: 8px; fill: #ffffff; }
 
 .section--general-statistic .container-statistics { padding: 50px 0; }
 
