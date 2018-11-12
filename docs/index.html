@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <title>Dashboard K</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projekt bootcamp'owy">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+</head>
+
+
+
+
+<body class="page--general">
+
+<div class="layout-row-top">
+    <div class="layout-row-top-left navigation--column">
+        <div class="navigation__logo"><img src="images/logo.svg" alt="logo"></div>
+        <div class="navigation__menu-button"><i class="icon icon-hamburger"><svg><use xlink:href="images\icons\if_menu-alt_134216.svg#Layer_1"></use></svg></i></div>
+    </div>
+    <header class="layout-row-top-right header">
+        <ul class="header--navigation">
+            <li class="header--navigation-element header--wallet">
+                <a href="#">
+                    <i class="icon icon-wallet"><svg><use xlink:href="images\icons\wallet.svg#Layer_1"></use></svg></i>
+                    <p>$1,500.00</p>
+                    <i class="icon icon-arrow-down"><svg><use xlink:href="images\icons\arrow-down.svg#Layer_1"></use></svg></i>
+                </a>
+            </li>
+            <li class="header--navigation-element header--notification">
+                <a href="#">
+                    <i class="icon icon-notification"><svg><use xlink:href="images\icons\notification.svg#Layer_1"></use></svg></i>
+                </a>
+            </li>
+            <li class="header--navigation-element header--profile">
+                <a href="#">
+                    <i class="icon icon-profile"><svg><use xlink:href="images\icons\profile.svg#Layer_1"></use></svg></i>
+                    <p>Leonard Cohen</p>
+                </a>
+            </li>
+            <li class="header--navigation-element header--logout">
+                <a href="#">
+                    <i class="icon icon-logout"><svg><use xlink:href="images\icons\quit.svg#Layer_1"></use></svg></i>
+                </a>
+            </li>
+        </ul>
+
+    </header>
+</div>
+
+<div class="layout-row-bottom">
+    <nav class="layout-row-bottom-left navigation--column noshow-sm">
+        <ul class="navigation__menu-wrapper">
+            <li class="navigation__menu-element"><a href="index.html">
+                <i class="icon icon-star"><svg><use xlink:href="images\icons\general.svg#Layer_1"></use></svg></i>
+                <p>General</p>
+            </a></li>
+            <li class="navigation__menu-element"><a href="details.html">
+                <i class="icon icon-details"><svg><use xlink:href="images\icons\details.svg#Layer_1"></use></svg></i>
+                <p>Details</p>
+            </a></li>
+            <li class="navigation__menu-element"><a href="links.html">
+                <i class="icon icon-links"><svg><use xlink:href="images\icons\links.svg#Layer_1"></use></svg></i>
+                <p>Links</p>
+            </a></li>
+            <li class="navigation__menu-element"><a href="banners.html">
+                <i class="icon icon-banners"><svg><use xlink:href="images\icons\banners.svg#Layer_1"></use></svg></i>
+                <p>Banners</p>
+            </a></li>
+            <li class="navigation__menu-element"><a href="personal-data.html">
+                <i class="icon icon-personal-data"><svg><use xlink:href="images\icons\personaldata.svg#Layer_1"></use></svg></i>
+                <p>Personal data</p>
+            </a></li>
+            <li class="navigation__menu-element"><a href="payout.html">
+                <i class="icon icon-payout"><svg><use xlink:href="images\icons\payout.svg#Layer_1"></use></svg></i>
+                <p>Payout</p>
+            </a></li>
+            <li class="navigation__menu-element"><a href="postback.html">
+                <i class="icon icon-postback"><svg><use xlink:href="images\icons\postback.svg#Layer_1"></use></svg></i>
+                <p>Postback</p>
+            </a></li>
+        </ul>
+        <div class="manager-box">
+            <h2 class="header-section">Your manager</h2>
+            <div class="manager-photo"><img src="images/photo.png" alt="Manager's photo"></div>
+            <p class="manager-name"><a href="#">Mikhael E.</a></p>
+        </div>
+    </nav>
+    <div class="layout-row-bottom-right">
+        <section class="section--general-statistic">
+            <div class="container header-container">
+                <h1 class="header-page">General statistic</h1>
+            </div>
+            <div class="container container-calendar container--border-bottom">
+                <div class="container-calendar--row">
+                    <div class="calendar-wrapper">
+                        <input type="date">
+                        <span class="spacer"></span>
+                        <input type="date">
+                        <i class="icon icon-calendar"><svg><use xlink:href="images\icons\calendar.svg#Layer_1"></use></svg></i>
+                    </div>
+                    <div class="btn btn--orange">
+                        <i class="icon icon-refresh"><svg><use xlink:href="images\icons\refresh.svg#Layer_1"></use></svg></i>
+                    </div>
+                </div>
+            </div>
+            <div class="container container-statistics">
+                <div class="container-statistics-text">
+                    <div class="stat-container">
+                        <p class="stat-container__description">Visit signups</p>
+                        <p class="stat-container__value">124</p>
+                    </div>
+                    <div class="stat-container">
+                        <p class="stat-container__description">Net deposit</p>
+                        <p class="stat-container__value">564</p>
+                    </div>
+                    <div class="stat-container">
+                        <p class="stat-container__description">FTD</p>
+                        <p class="stat-container__value">445</p>
+                    </div>
+                    <div class="stat-container">
+                        <p class="stat-container__description">Turnover</p>
+                        <p class="stat-container__value">442</p>
+                    </div>
+
+                </div>
+                <div class="container-statistics-chart">
+                    <h2>Earnings chart</h2>
+                    <canvas id="earningsChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-links">
+            <div class="container header-container">
+                <h1 class="header-page">Links</h1>
+            </div>
+            <div class="btn btn--orange btn--centered btn-modal--add-link">+ add new</div>
+            <div class="container link-list">
+                <div class="link-list__link-row">
+                    <div class="link-list__link-column name header-section">Home page</div>
+                    <div class="link-list__link-column value"><a href="#">http://www.homepage.com</a></div>
+                    <div class="link-list__link-column">
+                        <i class="icon icon-link"><svg><use xlink:href="images\icons\links.svg#Layer_1"></use></svg></i>
+                        <i class="icon icon-delete"><svg><use xlink:href="images\icons\trash.svg#Layer_1"></use></svg></i>
+                    </div>
+                </div>
+                <div class="link-list__link-row">
+                    <div class="link-list__link-column name header-section">Current offer</div>
+                    <div class="link-list__link-column value"><a href="#">http://www.current.com</a></div>
+                    <div class="link-list__link-column">
+                        <i class="icon icon-link"><svg><use xlink:href="images\icons\links.svg#Layer_1"></use></svg></i>
+                        <i class="icon icon-delete"><svg><use xlink:href="images\icons\trash.svg#Layer_1"></use></svg></i>
+                    </div>
+                </div>
+                <div class="link-list__link-row">
+                    <div class="link-list__link-column name header-section">Blurpix</div>
+                    <div class="link-list__link-column value"><a href="#">http://www.blurpix.com</a></div>
+                    <div class="link-list__link-column">
+                        <i class="icon icon-link"><svg><use xlink:href="images\icons\links.svg#Layer_1"></use></svg></i>
+                        <i class="icon icon-delete"><svg><use xlink:href="images\icons\trash.svg#Layer_1"></use></svg></i>
+                    </div>
+                </div>
+                <div class="link-list__link-row">
+                    <div class="link-list__link-column name header-section">Your Site</div>
+                    <div class="link-list__link-column value"><a href="#">http://www.yoursite.com</a></div>
+                    <div class="link-list__link-column">
+                        <i class="icon icon-link"><svg><use xlink:href="images\icons\links.svg#Layer_1"></use></svg></i>
+                        <i class="icon icon-delete"><svg><use xlink:href="images\icons\trash.svg#Layer_1"></use></svg></i>
+                    </div>
+                </div>
+                <div class="link-list__link-row">
+                    <div class="link-list__link-column name header-section">Google</div>
+                    <div class="link-list__link-column value"><a href="#">http://www.google.com</a></div>
+                    <div class="link-list__link-column">
+                        <i class="icon icon-link"><svg><use xlink:href="images\icons\links.svg#Layer_1"></use></svg></i>
+                        <i class="icon icon-delete"><svg><use xlink:href="images\icons\trash.svg#Layer_1"></use></svg></i>
+                    </div>
+                </div>
+                <div class="link-list__link-row">
+                    <div class="link-list__link-column name header-section">Facebook</div>
+                    <div class="link-list__link-column value"><a href="#">http://www.facebook.com</a></div>
+                    <div class="link-list__link-column">
+                        <i class="icon icon-link"><svg><use xlink:href="images\icons\links.svg#Layer_1"></use></svg></i>
+                        <i class="icon icon-delete"><svg><use xlink:href="images\icons\trash.svg#Layer_1"></use></svg></i>
+                    </div>
+                </div>
+            </div>
+            <div class="btn btn--orange btn--centered btn-modal--add-link">+ add new</div>
+        </section>
+
+
+    </div>
+</div>
+
+
+<div class="overlay" id="overlay">
+    <div class="modal modal-addlink" id="addLinkModal">
+            <form action="#" method="POST">
+                <div class="container modal__header">
+                    <h1 class="modal__header-text">add url</h1>
+                    <div class="modal__header-button js--close-modal btn--close"><i class="icon icon-close"><svg><use xlink:href="images\icons\close.svg#Layer_1"></use></svg></i></div>
+                </div>
+                <div class="container scheme-name__container">
+                    <div class="row scheme-name__row">
+                        <div class="field scheme-name__field-name">
+                            <label for="scheme-name__name">Scheme name</label>
+                            <input id="scheme-name__name" name="scheme-name__name" type="text" placeholder="Placeholder">
+                        </div>
+                        <div class="field scheme-name__field-complaint">
+                            <select id="scheme-name__complaint" name="scheme-name__complaint">
+                                <option value="0">Select complaint...</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                        </div>
+                        <div class="field scheme-name__field-language">
+                            <label for="scheme-name__language">Language</label>
+                            <select id="scheme-name__language" name="scheme-name__language">
+                                <option value="1">EN</option>
+                                <option value="2">PL</option>
+                                <option value="3">JP</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="container select-websites__container">
+                    <div class="row select-websites__row">
+                        <p>Select websites</p>
+                        <div class="select-websites__list">
+                            <div class="checkbox">
+                                <input type="checkbox" id="website01" name="websites"
+                                       value="website01"/>
+                                <label for="website01"><span class="checkbox__icon"><span class="checkbox__icon-tick"></span></span>website01</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="website02" name="websites"
+                                       value="website02"/>
+                                <label for="website02"><span class="checkbox__icon"><span class="checkbox__icon-tick"></span></span>website02</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="website03" name="websites"
+                                       value="website03"/>
+                                <label for="website03"><span class="checkbox__icon"><span class="checkbox__icon-tick"></span></span>website03</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="website04" name="websites"
+                                       value="website04"/>
+                                <label for="website04"><span class="checkbox__icon"><span class="checkbox__icon-tick"></span></span>website04</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="website05" name="websites"
+                                       value="website05"/>
+                                <label for="website05"><span class="checkbox__icon"><span class="checkbox__icon-tick"></span></span>website05</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="website06" name="websites"
+                                       value="website06"/>
+                                <label for="website06"><span class="checkbox__icon"><span class="checkbox__icon-tick"></span></span>website06</label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container footer__container">
+                    <input id="add-link__generated-link" name="add-link__generated-link" type="text" placeholder="Generated link">
+                    <button class="btn btn--disabled">Copy link</button>
+                    <button type="submit" class="btn btn--orange btn--right js--close-modal">Save</button>
+                </div>
+
+            </form>
+
+    </div>
+</div>
+
+
+
+
+<script src="js/script.js"></script>
+<script src="js/chart.js"></script>
+</body>
+</html>

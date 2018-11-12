@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <title>Dashboard K - Styleguide</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projekt bootcamp'owy">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body class="body--styleguide">
+<h1>Syleguide</h1>
+
+<div class="reference-container">
+    <h1 class="header-page">I am a page header</h1>
+</div>
+<div class="reference-container">
+    <h2 class="header-section">I am section header</h2>
+</div>
+
+<br><br><br>
+
+<section class="section-links">
+    <div class="container link-list">
+        <div class="link-list__link-row">
+            <div class="link-list__link-column header-section">Home page</div>
+            <div class="link-list__link-column"><a>http://www.homepage.com</a></div>
+            <div class="link-list__link-column">
+                <i class="icon icon-link"><svg><use xlink:href="images\icons\links.svg#Layer_1"></use></svg></i>
+                <i class="icon icon-delete"><svg><use xlink:href="images\icons\trash.svg#Layer_1"></use></svg></i>
+            </div>
+        </div>
+        <div class="link-list__link-row">
+            <div class="link-list__link-column name header-section">Current offer</div>
+            <div class="link-list__link-column value"><a href="#">http://www.current.com</a></div>
+            <div class="link-list__link-column">
+                <i class="icon icon-link"><svg><use xlink:href="images\icons\links.svg#Layer_1"></use></svg></i>
+                <i class="icon icon-delete"><svg><use xlink:href="images\icons\trash.svg#Layer_1"></use></svg></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br><br><br>
+
+<section class="buttons">
+    <button class="btn btn--grey">Button</button>
+    <button class="btn btn--orange">Button</button>
+    <button class="btn btn--disabled">Button</button>
+    <br><br>
+    <div class="container-pagination">
+        <div class="container-pagination__page-left"><a href="#"><i class="icon icon-arrow-left"><svg><use xlink:href="images\icons\arrow-left.svg#Layer_1"></use></svg></i></a></div>
+        <div class="container-pagination__page-number container-pagination__page-number--active"><a href="#">1</a></div>
+        <div class="container-pagination__page-number"><a href="#">2</a></div>
+        <div class="container-pagination__page-number"><a href="#">3</a></div>
+        <div class="container-pagination__page-number"><a href="#">4</a></div>
+        <div class="container-pagination__page-number"><a href="#">5</a></div>
+        <div class="container-pagination__page-number"><a href="#">6</a></div>
+        <div class="container-pagination__page-number"><a href="#">7</a></div>
+        <div class="container-pagination__page-number"><a href="#">8</a></div>
+        <div class="container-pagination__page-number"><a href="#">9</a></div>
+        <div class="container-pagination__right"><a href="#"><i class="icon icon-arrow-left"><svg><use xlink:href="images\icons\arrow-right.svg#Layer_1"></use></svg></i></a></div>
+    </div>
+</section>
+
+<br><br><br>
+
+<section class="inputs">
+    <textarea placeholder="Placeholder"></textarea>
+    <br>
+
+    <input type="text" placeholder="Placeholder">
+    <br>
+
+    <label class="input-label" for="input-password">Hasło: </label>
+    <div class="input-icon input-icon-password"><input id="input-password" type="password" placeholder="password"></div>
+    <br>
+
+    <div class="calendar-wrapper">
+        <input type="date">
+        <span class="spacer"></span>
+        <input type="date">
+        <i class="icon icon-calendar"><svg><use xlink:href="images\icons\calendar.svg#Layer_1"></use></svg></i>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="field">
+        <label for="example-select">Example select</label>
+        <select id="example-select" name="example-select">
+            <option value="1">Select an option</option>
+            <option value="2">Option one</option>
+            <option value="3">And second one</option>
+        </select>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="checkbox">
+        <input type="checkbox" id="checkNumber" name="statuses"
+               value="checkNumber"/>
+        <label for="checkNumber"><span class="checkbox__icon"><span class="checkbox__icon-tick"></span></span>checkNumber</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" id="noAnswer" name="statuses"
+               value="noAnswer"/>
+        <label for="noAnswer"><span class="checkbox__icon"><span class="checkbox__icon-tick"></span></span>noAnswer</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" id="noCall" name="statuses"
+               value="noCall"/>
+        <label for="noCall"><span class="checkbox__icon"><span class="checkbox__icon-tick"></span></span>noCall</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" id="callAgain" name="statuses"
+               value="callAgain"/>
+        <label for="callAgain"><span class="checkbox__icon"><span class="checkbox__icon-tick"></span></span>callAgain</label>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="slider-wrapper">
+        <input class="slider" type="range">
+    </div>
+</section>
+
+
+<br><br><br>
+
+
+<h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+<h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
+<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+<p>Lorem ipsum dolor sit amet, consectetur <strong>adipiscing elit</strong>. Maecenas blandit diam urna, eu <a href="#">dignissim</a> ex dignissim consequat. Duis porta lectus lorem, quis eleifend justo scelerisque eget. Duis ac sem et turpis tincidunt molestie in non ipsum. Maecenas ut augue erat. Phasellus eu est commodo est hendrerit tempor. Mauris dignissim ex vel magna aliquet, sit amet facilisis turpis tincidunt. Fusce quis blandit libero, sed dapibus nisl. Pellentesque vitae ligula sed tellus sagittis dapibus eu non metus. Mauris rutrum ligula ut sapien varius, pellentesque volutpat diam porta. Ut at nunc ac tortor dapibus sodales id at leo. Nunc posuere lorem non feugiat elementum. Nunc sagittis diam justo, nec malesuada sapien tristique id. Vivamus in consequat nibh. Etiam tempor id ligula a dapibus. Proin vitae arcu nulla.</p>
+<a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+<ul>
+    <li>Lorem ipsum dolor, consectetur <a href="#">consectetur adipiscing elit.</a>.</li>
+    <li>Lorem ipsum dolor <strong>sit amet</strong></li>
+    <li>Lorem ipsum dolor <strong>sit amet</strong>, consectetur <a href="#">consectetur adipiscing elit.</a>.</li>
+</ul>
+<ol>
+    <li>Lorem ipsum dolor, consectetur <a href="#">consectetur adipiscing elit.</a>.</li>
+    <li>Lorem ipsum dolor <strong>sit amet</strong></li>
+    <li>Lorem ipsum dolor <strong>sit amet</strong>, consectetur <a href="#">consectetur adipiscing elit.</a>.</li>
+</ol>
+</body>
+</html>

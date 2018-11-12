@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <title>Dashboard K</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projekt bootcamp'owy">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+
+
+
+<body class="page--general">
+
+<div class="layout-row-top">
+    <div class="layout-row-top-left navigation--column">
+        <div class="navigation__logo"><img src="images/logo.svg" alt="logo"></div>
+        <div class="navigation__menu-button"><i class="icon icon-hamburger"><svg><use xlink:href="images\icons\if_menu-alt_134216.svg#Layer_1"></use></svg></i></div>
+    </div>
+    <header class="layout-row-top-right header">
+        <ul class="header--navigation">
+            <li class="header--navigation-element header--wallet">
+                <a href="#">
+                    <i class="icon icon-wallet"><svg><use xlink:href="images\icons\wallet.svg#Layer_1"></use></svg></i>
+                    <p>$1,500.00</p>
+                    <i class="icon icon-arrow-down"><svg><use xlink:href="images\icons\arrow-down.svg#Layer_1"></use></svg></i>
+                </a>
+            </li>
+            <li class="header--navigation-element header--notification">
+                <a href="#">
+                    <i class="icon icon-notification"><svg><use xlink:href="images\icons\notification.svg#Layer_1"></use></svg></i>
+                </a>
+            </li>
+            <li class="header--navigation-element header--profile">
+                <a href="#">
+                    <i class="icon icon-profile"><svg><use xlink:href="images\icons\profile.svg#Layer_1"></use></svg></i>
+                    <p>Leonard Cohen</p>
+                </a>
+            </li>
+            <li class="header--navigation-element header--logout">
+                <a href="#">
+                    <i class="icon icon-logout"><svg><use xlink:href="images\icons\quit.svg#Layer_1"></use></svg></i>
+                </a>
+            </li>
+        </ul>
+
+    </header>
+</div>
+
+<div class="layout-row-bottom">
+    <nav class="layout-row-bottom-left navigation--column noshow-sm">
+        <ul class="navigation__menu-wrapper">
+            <li class="navigation__menu-element"><a href="index.html">
+                <i class="icon icon-star"><svg><use xlink:href="images\icons\general.svg#Layer_1"></use></svg></i>
+                <p>General</p>
+            </a></li>
+            <li class="navigation__menu-element"><a href="details.html">
+                <i class="icon icon-details"><svg><use xlink:href="images\icons\details.svg#Layer_1"></use></svg></i>
+                <p>Details</p>
+            </a></li>
+            <li class="navigation__menu-element"><a href="links.html">
+                <i class="icon icon-links"><svg><use xlink:href="images\icons\links.svg#Layer_1"></use></svg></i>
+                <p>Links</p>
+            </a></li>
+            <li class="navigation__menu-element"><a href="banners.html">
+                <i class="icon icon-banners"><svg><use xlink:href="images\icons\banners.svg#Layer_1"></use></svg></i>
+                <p>Banners</p>
+            </a></li>
+            <li class="navigation__menu-element"><a href="personal-data.html">
+                <i class="icon icon-personal-data"><svg><use xlink:href="images\icons\personaldata.svg#Layer_1"></use></svg></i>
+                <p>Personal data</p>
+            </a></li>
+            <li class="navigation__menu-element"><a href="payout.html">
+                <i class="icon icon-payout"><svg><use xlink:href="images\icons\payout.svg#Layer_1"></use></svg></i>
+                <p>Payout</p>
+            </a></li>
+            <li class="navigation__menu-element"><a href="postback.html">
+                <i class="icon icon-postback"><svg><use xlink:href="images\icons\postback.svg#Layer_1"></use></svg></i>
+                <p>Postback</p>
+            </a></li>
+        </ul>
+        <div class="manager-box">
+            <h2 class="header-section">Your manager</h2>
+            <div class="manager-photo"><img src="images/photo.png" alt="Manager's photo"></div>
+            <p class="manager-name"><a href="#">Mikhael E.</a></p>
+        </div>
+    </nav>
+
+    <div class="layout-row-bottom-right">
+        <section class="section-postback">
+            <form action="#" method="POST">
+            <div class="container header-container">
+                <h1 class="header-page">Postback</h1>
+            </div>
+            <div class="container postback-parameters">
+                <p>You can insert some parameters in this postback:</p>
+                <div class="row textarea-row">
+                    <div class="field textarea-signup">
+                        <label for="textarea-signup">Signup</label>
+                        <textarea id="textarea-signup" placeholder="Signup">crm_userId =%user_id%
+subid =%p%</textarea>
+                    </div>
+                    <div class="field textarea-deposit">
+                        <label for="textarea-deposit">Deposit</label>
+                        <textarea id="textarea-deposit" placeholder="Deposit">crm_userId =%user_id%
+subid =%p%</textarea>
+
+                    </div>
+                </div>
+                <div class="row select-row">
+                    <div class="field">
+                        <label for="postback-type">Postback type</label>
+                        <select id="postback-type" name="postback-type">
+                            <option value="1">S2S (http://..)</option>
+                            <option value="2">P2P (torrent://..)</option>
+                            <option value="3">F2D (ftp://..)</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="postback-countries">To countries</label>
+                        <select id="postback-countries" name="postback-countries">
+                            <option value="">Select an option...</option>
+                            <option value="Poland">Poland</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Thailand">Thailand</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="postback-sending">Sending options</label>
+                        <select id="postback-sending" name="postback-sending">
+                            <option value="">Select an option...</option>
+                            <option value="Post">Post</option>
+                            <option value="Email">Email</option>
+                            <option value="Armoured vehicle">Armoured vehicle</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+                <div class="container postback-parameters-vertical-divide">
+                    <div class="row additional-row">
+                        <div class="field checkboxes">
+                            <p><strong>NOT</strong> send statuses</p>
+                            <div class="scroll">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="checkNumber" name="statuses"
+                                           value="checkNumber"/>
+                                    <label for="checkNumber"><span class="checkbox__icon"><span class="checkbox__icon-tick"></span></span>checkNumber</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="noAnswer" name="statuses"
+                                           value="noAnswer"/>
+                                    <label for="noAnswer"><span class="checkbox__icon"><span class="checkbox__icon-tick"></span></span>noAnswer</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="noCall" name="statuses"
+                                           value="noCall"/>
+                                    <label for="noCall"><span class="checkbox__icon"><span class="checkbox__icon-tick"></span></span>noCall</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="callAgain" name="statuses"
+                                           value="callAgain"/>
+                                    <label for="callAgain"><span class="checkbox__icon"><span class="checkbox__icon-tick"></span></span>callAgain</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="checkNumber2" name="statuses"
+                                           value="checkNumber2"/>
+                                    <label for="checkNumber2"><span class="checkbox__icon"><span class="checkbox__icon-tick"></span></span>checkNumber2</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="noAnswer2" name="statuses"
+                                           value="noAnswer2"/>
+                                    <label for="noAnswer2"><span class="checkbox__icon"><span class="checkbox__icon-tick"></span></span>noAnswer2</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="noCall2" name="statuses"
+                                           value="noCall2"/>
+                                    <label for="noCall2"><span class="checkbox__icon"><span class="checkbox__icon-tick"></span></span>noCall2</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="callAgain2" name="statuses"
+                                           value="callAgain2"/>
+                                    <label for="callAgain2"><span class="checkbox__icon"><span class="checkbox__icon-tick"></span></span>callAgain2</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field range">
+                            <p>Send after:</p>
+                            <div class="slider-wrapper">
+                                <input class="slider" type="range">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn--orange btn--right">Create pixel</button>
+                <div class="clearfix"></div>
+            </form>
+        </section>
+
+    </div>
+</div>
+
+
+
+
+
+
+<script src="js/script.js"></script>
+</body>
+</html>
