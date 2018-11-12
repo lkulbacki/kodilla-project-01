@@ -1,3 +1,5 @@
+// TEXTAREA
+
 textarea {
   border-radius: 3px;
   border: 1px solid $color-grey-l3;
@@ -15,6 +17,7 @@ textarea {
 
 }
 
+// INPUT
 
 input[type="text"], input[type="password"], input[type="select"], input[type="date"] {
   position: relative;
@@ -43,6 +46,8 @@ label.input-label {
   display: inline-block;
 }
 
+// INPUT - FOR PASSWORD
+
 div.input-icon {
   display: inline-block;
   position: relative;
@@ -64,6 +69,8 @@ div.input-icon {
     padding-left: 40px;
   }
 }
+
+// CALENDAR
 
 .calendar-wrapper {
   border: 1px solid $color-grey-l2;
@@ -102,6 +109,8 @@ div.input-icon {
   }
 }
 
+// SELECT
+
 select {
   appearance: none;
   background-color: #ffffff;
@@ -117,6 +126,7 @@ select {
   background-position: right 5px center;
 }
 
+// CHECKBOX
 
 .checkbox {
   /* move original checkbox tick out of sight */
@@ -176,7 +186,9 @@ select {
   }
 }
 
+// RANGE SLIDER
 /* simple range slider styling */
+
 input[type=range].slider {
   -webkit-appearance: none;
   width: 100%;
