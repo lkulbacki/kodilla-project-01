@@ -13,11 +13,11 @@ document.querySelector('.navigation__menu-button').addEventListener('click', fun
 
 /* toggle menu end */
 
-var personal_data_form = document.querySelector('form#personal-data');
+var personalDataForm = document.querySelector('form#personal-data');
 
 // walidacja formularza personal data - email
-if (typeof personal_data_form !== "undefined" && personal_data_form !== null) {
-    personal_data_form.addEventListener('submit', function(event) {
+if (typeof personalDataForm !== "undefined" && personalDataForm !== null) {
+    personalDataForm.addEventListener('submit', function(event) {
         var isFormValid = true;
 
         /* sprawdzenie adresu email i ewentualne pokolorwanie inputa */
@@ -88,4 +88,3 @@ if(typeof modal !== "undefined" && modal !== null) {
     }
 
 };
-
